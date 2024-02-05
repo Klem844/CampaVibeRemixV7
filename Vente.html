@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Logo.png">
+    <title>Vente de Billets - CampaVibeRemix</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="Logo-removebg-preview.png" alt="Logo CampaVibeRemix">
+        </div>
+        <h1>Vente de Billets - CampaVibeRemix</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_blank">Accueil</a></li>
+                <li><a href="info.html" target="_blank">Info</a></li>
+                <li><a href="Vente.html" target="_blank">Billets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Choisissez et Achetez vos Billets</h2>
+        <form id="ticketForm">
+            <label for="ticketType">Type de Billet:</label>
+            <p>Billet Normal</p>
+
+            <label for="quantity">Quantité:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <button type="button" onclick="calculateTotal()">Calculer le Total</button>
+        </form>
+        <p id="totalPrice">Total: $0</p>
+
+        <!-- Ajoutez le bouton avec le lien vers fenetre.js -->
+        <button onclick="window.location.href = 'Paypal.html'">Ouvrir la Fenêtre</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CampaVibeRemix. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</html>

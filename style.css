@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.pexels.com/photos/844928/pexels-photo-844928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc00;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#schedule.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#leftColumn, #rightColumn {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+}
+
+#foodSection, #alcoholSection {
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: left;
+}
+
+#schedule img {
+    max-width: 15%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#logo {
+    position: fixed;
+    left: -10%;
+    top: -6%;
+
+}
+
+#logo img {
+    max-width: 40%;
+    height: auto;
+}
+/* Ajoutez ces styles CSS dans votre fichier style.css */
+
+#schedule {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#leftColumn,
+#rightColumn {
+    width: 50%; /* Divisez l'espace en deux colonnes */
+    box-sizing: border-box; /* Empêchez les marges et les rembourrages de changer la largeur réelle */
+}
+
+@media screen and (max-width: 767px) {
+    #leftColumn,
+    #rightColumn {
+        width: 100%; /* Sur les écrans étroits, occuper la largeur complète */
+    }
+
+    #rightColumn {
+        order: -1; /* Inversez l'ordre d'affichage de la colonne de droite (vente d'alcool) */
+    }
+    #logo {
+        display: none; /* Cacher le logo sur les petits écrans */
+
+    }
+}
+@media screen and (max-width: 767px) {
+    body {
+        background-image: url('pexels-nicholas-derio-palacios-19556998.jpg'); /* Remplacez 'background-image-mobile.jpg' par votre image de fond pour les écrans étroits */
+    }
+}
